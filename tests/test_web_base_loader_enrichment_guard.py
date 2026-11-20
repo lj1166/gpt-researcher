@@ -40,7 +40,7 @@ def _load(get_relevant_images=lambda soup, link: []):
     lcd = types.ModuleType("langchain_community.document_loaders")
 
     class WebBaseLoader:
-        def __init__(self, link):
+        def __init__(self, link, session=None):
             self.link = link
             self.requests_kwargs = {}
 
